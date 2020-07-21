@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Public",
+    "\\Public\\python"
   ],
+  "SelectedNode": "\\Public\\python\\server.py",
   "PreviewInSolutionExplorer": false
 }

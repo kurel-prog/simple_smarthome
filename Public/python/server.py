@@ -1,11 +1,11 @@
-import socket
+import http.server
+import socketio
 
-# create a Socket.IO server
-sio = socketio.AsyncServer()
+PORT = 5000
 
-# wrap with ASGI application
-app = socketio.ASGIApp(sio, static_files=static_files)
+sio = socketio.Client()
 
-static_files = {
+@sio.on('my message')
+def on_message(data):
+    print('I received a message!')
 
-}
