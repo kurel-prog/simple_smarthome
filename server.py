@@ -7,6 +7,7 @@ app.config['SECRET_KEY'] = 'secret!'
 # create a SocketIO(app)
 socketio = SocketIO(app)
 
+# create port (?)
 PORT = 5000
 print("Server is starting at port 5000...")
 
