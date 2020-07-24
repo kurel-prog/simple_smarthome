@@ -24,6 +24,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
         <script>
             const client = io();
+
+            client.on("connect", () =>
+            {
+                client.emit('connection', 'New client connected...')
+                console.log("New client connected!");
+            })
+
             function turnOn() {
                 client.emit('turn-on', {data: 'TurnOnTheLight'});
                 console.log("TurnOnTheLight");
