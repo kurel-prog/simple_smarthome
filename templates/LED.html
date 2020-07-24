@@ -28,7 +28,13 @@
             client.on("connect", () =>
             {
                 client.emit('connection', 'New client connected...')
-                console.log("New client connected!");
+                console.log("Connected to server!");
+                client.on("lightOn", (data) => {
+                    console.log(data);
+                });
+                client.on("lightOff", (data) => {
+                    console.log(data);
+                });
             })
 
             function turnOn() {
