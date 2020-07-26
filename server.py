@@ -19,11 +19,11 @@ def hello():
 # functions to control the lights
 def onLight():
     print("Code turn on here!")
-    socketio.emit("lightOn", {'data': 'From server: The light: On'})
+    socketio.emit("lightOn", {'data': 'On'})
 
 def offLight():
     print("Code turn off here!")
-    socketio.emit("lightOff", {'data': 'From server: The light: Off'})
+    socketio.emit("lightOff", {'data': 'Off'})
 
 # socket on connection
 @socketio.on('connection')
